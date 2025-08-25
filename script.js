@@ -4,4 +4,10 @@ const citacoes = [
     "O sucesso é ir de fracasso em fracasso sem perder o entusiasmo. - Winston Churchill"
 ];
 
-// Lógica para gerar citação será adicionada depois.
+const citacaoEl = document.getElementById("citacao");
+const botaoEl = document.getElementById("novaCitacaoBtn");
+
+botaoEl.addEventListener("click", () => {
+    const randomIndex = Math.floor(Math.random() * citacoes.length);
+    citacaoEl.textContent = citacoes[randomIndex];
+});
